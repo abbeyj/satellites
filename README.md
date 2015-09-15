@@ -1,2 +1,4 @@
 # satellites
-JavaScript clone of http://www.colorado.edu/physics/2000/applets/satellites.html
+A fun 2D satellite orbit simulation.
+
+Live demo at http://www.stardrifter.org/satellites/

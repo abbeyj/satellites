@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Satellites</title>
+    <style>
+        body {
+            background-color: #FFB794;
+        }
+        div#container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        div.box {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box">
+            <h1>Satellites</h1>
+            <canvas id="satellites" width="800" height="800" style="background-color: black">
+                Your browser doesn't support the HTML canvas element.
+            </canvas>
+            <div>Number of satellites: <span id="count"></span></div>
+        </div>
+        <div class="box" style="margin-top: 30px; flex: 1; min-width: 320px">
+            <h2>About</h2>
+            <div>I always enjoyed playing with the <a href="http://www.colorado.edu/physics/2000/applets/satellites.html">Physics 2000 Satellites applet</a>.
+            But now it is hard to use since many people don't have Java installed and the applet is broken with modern versions of Java.  So I recreated it from scratch using <tt>&lt;canvas&gt;</tt>
+            and JavaScript.</div>
+            <h2>Instructions</h2>
+            <div>Click to place a satellite.  Click and drag to give it a push.</div>
+            <h2>Things to explore</h2>
+            <div>
+            <ul>
+                <li>Can you get a satellite into orbit around the Earth?</li>
+                <li>Is it easier to get something in orbit close to the Earth or farther away?</li>
+                <li>Is there a difference in difficulty in getting sallellites orbiting clockwise vs. counter-clockwise?</li>
+                <li>Can you get a satellite into orbit around the Moon?</li>
+                <li>What happens to satellites orbiting around Earth at approximately the same distance as the Moon?</li>
+                <li>Can you start a satellite outside of the Moon's orbit and have it settle into an orbit inside the Moon's orbit?  Why or why not?</li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <script src="satellites.js"></script>
+    <a href="https://github.com/abbeyj/satellites"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+</body>
+</html>
