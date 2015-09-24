@@ -6,9 +6,11 @@ var massiveBodies = [earth, moon];
 var satelliteImage = new Image();
 satelliteImage.src = 'data:image/svg+xml,' + escape('<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><circle fill="#FFF" cx="2" cy="2" r="2"/></svg>');
 var satellites = [];
+var satellitesDestroyed = 0;
 var ctx = document.getElementById('satellites').getContext('2d');
 var lastMouseDownPoint = null;
 var elCount = document.getElementById('count');
+var elCountDestroyed = document.getElementById('count_destroyed');
 
 var bodyImagesRemainingToLoad = 2;
 function onBodyImageLoaded()
@@ -175,6 +177,8 @@ function draw()
             var sat = satellites[i];
             if (!sat.checkCollisions() && sat.pos.sub(earth.pos).magSquared() < 500000)
                 newSatellites.push(sat);
+            else
+                satellitesDestroyed++;
         }
         satellites = newSatellites;
 
@@ -197,6 +201,7 @@ function draw()
             satellites[i].draw();
 
         elCount.textContent = satellites.length;
+        elCountDestroyed.textContent = satellitesDestroyed;
     } catch (e) {
         console.error(e);
     }
